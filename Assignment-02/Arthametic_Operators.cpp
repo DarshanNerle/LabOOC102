@@ -1,3 +1,5 @@
+// Write a C++ program to perform arithmetic operations on two numbers.
+
 #include<iostream>
 using namespace std;
 int main()
