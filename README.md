@@ -1,2 +1,2 @@
 # LabOOC102
-Practicing C++ codes 
+Practicing C/C++ codes 
