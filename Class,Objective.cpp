@@ -1,34 +1,45 @@
 // Write a C++ program for creating a class, objective and constructor.
 
 #include <iostream>
+#include <string>
+
 using namespace std;
 
-class student
+class Student
 {
 private:
-    int RollNumber;
-    string Name;
+    string name;
+    int rollNo;
+    float marks;
+
 public:
-    student(string n, int r)
+    void inputDetails()
     {
-        RollNumber = r;
-        Name = n;
+        cout << "Enter Student Name: ";
+        getline(cin >> ws, name);
+
+        cout << "Enter Roll Number: ";
+        cin >> rollNo;
+
+        cout << "Enter Marks: ";
+        cin >> marks;
     }
 
-    void display()
+    void displayDetails() const
     {
-        cout << "Name: " << Name << endl;
-        cout << "Roll Number: " << RollNumber << endl;
+        cout << "\n----- Student Details -----\n";
+        cout << "Name    : " << name << endl;
+        cout << "Roll No.: " << rollNo << endl;
+        cout << "Marks   : " << marks << endl;
     }
 };
 
 int main()
 {
-    student s1("RBI", 1);
-    student s2("BOI", 2);
+    Student s;
 
-    s1.display();
-    s2.display();
+    s.inputDetails();
+    s.displayDetails();
 
     return 0;
 }

@@ -1,17 +1,51 @@
 // Write a C++ program for complex one number formation.
 
 #include <iostream>
+
 using namespace std;
+
+class Complex
+{
+private:
+    int real, imag;
+
+public:
+    Complex(int r = 0, int i = 0) : real(r), imag(i) {}
+
+    Complex add(const Complex &c)
+    {
+        return Complex(real + c.real, imag + c.imag);
+    }
+
+    Complex subtract(const Complex &c)
+    {
+        return Complex(real - c.real, imag - c.imag);
+    }
+
+    void display() const
+    {
+        cout << real << " + i" << imag << endl;
+    }
+};
+
 int main()
 {
-    int real, imag;
-    cout << "Enter the real part of the complex number: ";
-    cin >> real;
+    Complex c1(4, 5), c2(8, 9);
 
-    cout << "Enter the imaginary part of the complex number: ";
-    cin >> imag;
+    Complex sum = c1.add(c2);
+    Complex diff = c1.subtract(c2);
 
-    cout << "The complex number is: " << real << " + " << imag << "i" << endl;
+    cout << "First Complex Number: ";
+    c1.display();
+
+    cout << "Second Complex Number: ";
+    c2.display();
+
+    cout << "Addition: ";
+    sum.display();
+
+    cout << "Subtraction: ";
+    diff.display();
 
     return 0;
 }
