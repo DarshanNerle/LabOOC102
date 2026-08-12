@@ -1,5 +1,3 @@
-// Write a C++ program for complex one number formation.
-
 #include <iostream>
 
 using namespace std;
@@ -14,14 +12,14 @@ public:
 
     void add(const Complex &c)
     {
-        real += c.real;
-        imag += c.imag;
+        real = real + c.real;
+        imag = imag + c.imag;
     }
 
     void subtract(const Complex &c)
     {
-        real -= c.real;
-        imag -= c.imag;
+        real = real - c.real;
+        imag = imag - c.imag;
     }
 
     void display() const
@@ -34,8 +32,8 @@ int main()
 {
     Complex c1(4, 5), c2(8, 9);
 
-    Complex sum = c1.add(c2);
-    Complex diff = c1.subtract(c2);
+    c1.add(c2);
+    c1.subtract(c2);
 
     cout << "First Complex Number: ";
     c1.display();
@@ -44,10 +42,10 @@ int main()
     c2.display();
 
     cout << "Addition: ";
-    sum.display();
+    c1.display();
 
     cout << "Subtraction: ";
-    diff.display();
-
+    c1.display();
+    
     return 0;
 }
