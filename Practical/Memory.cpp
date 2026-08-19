@@ -1,3 +1,5 @@
+//Write a C++ program to demonstrate dynamic memory allocation for an integer array using new and delete operators.
+
 #include <iostream>
 using namespace std;
 
